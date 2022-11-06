@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
       noteData.innerHTML = dataNew;
 
       const buttonEditing = document.createElement("img");
-      buttonEditing.src = "img/icon/pencil.png";
+      buttonEditing.src = "../img/icon/pencil.png";
       buttonEditing.classList.add('content__editing');
       buttonEditing.setAttribute("alt", "");
 
@@ -78,7 +78,7 @@ window.addEventListener('load', function () {
          } else {
             noteTextArea.setAttribute("readonly", "readonly");
             noteTextArea.style.textShadow = "0px 0px 0px #00000088";
-            buttonEditing.src = "img/icon/pencil.png";
+            buttonEditing.src = "../img/icon/pencil.png";
          }
 
       });
