@@ -29,12 +29,12 @@ window.addEventListener('load', function () {
       noteData.innerHTML = dataNew;
 
       const buttonEditing = document.createElement("img");
-      buttonEditing.src = "../img/icon/pencil.png";
+      buttonEditing.src = "img/icon/pencil.png";
       buttonEditing.classList.add('content__editing');
       buttonEditing.setAttribute("alt", "");
 
       const buttonDelet = document.createElement("img");
-      buttonDelet.src = "../img/icon/cross-click.png";
+      buttonDelet.src = "img/icon/cross-click.png";
       buttonDelet.classList.add('content__delet');
       buttonDelet.setAttribute("alt", "");
 
@@ -69,16 +69,16 @@ window.addEventListener('load', function () {
             noteTextArea.focus();
             noteTextArea.removeAttribute("readonly");
             noteTextArea.style.textShadow = "0px 1px 1px #00000088";
-            buttonEditing.src = "../img/icon/pencil-click.png";
+            buttonEditing.src = "img/icon/pencil-click.png";
          } else if (noteTextArea.hasAttribute('readonly')) {
             noteTextArea.focus();
             noteTextArea.removeAttribute("readonly");
             noteTextArea.style.textShadow = "0px 1px 1px #00000088";
-            buttonEditing.src = "../img/icon/pencil-click.png";
+            buttonEditing.src = "img/icon/pencil-click.png";
          } else {
             noteTextArea.setAttribute("readonly", "readonly");
             noteTextArea.style.textShadow = "0px 0px 0px #00000088";
-            buttonEditing.src = "../img/icon/pencil.png";
+            buttonEditing.src = "img/icon/pencil.png";
          }
 
       });
@@ -105,10 +105,10 @@ window.addEventListener('load', function () {
       function buttonEditingHandler(event) {
          if (noteTextArea.hasAttribute('readonly')) {
             if (event.type == 'mouseover') {
-               buttonEditing.src = "../img/icon/pencil-hover.png";
+               buttonEditing.src = "img/icon/pencil-hover.png";
             }
             if (event.type == 'mouseout') {
-               buttonEditing.src = "../img/icon/pencil.png";
+               buttonEditing.src = "img/icon/pencil.png";
             }
          }
       }
@@ -116,10 +116,10 @@ window.addEventListener('load', function () {
       buttonDelet.onmouseover = buttonDelet.onmouseout = buttonDeletHandler;
       function buttonDeletHandler(event) {
          if (event.type == 'mouseover') {
-            buttonDelet.src = "../img/icon/cross.png";
+            buttonDelet.src = "img/icon/cross.png";
          }
          if (event.type == 'mouseout') {
-            buttonDelet.src = "../img/icon/cross-click.png";
+            buttonDelet.src = "img/icon/cross-click.png";
          }
       }
 
