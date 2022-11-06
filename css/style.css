@@ -1,0 +1,283 @@
+@import "nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap");
+
+body {
+      font-family: "Kanit", sans-serif;
+      height: 100vh;
+}
+
+.header {
+      margin: 0px 0px 78px 0px;
+      background-color: rgb(246, 246, 246);
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0);
+      height: 59px;
+
+      &__logo {
+            margin: 12px 0px 0px 48px;
+      }
+}
+
+.content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__header {
+            display: flex;
+            align-items: center;
+            width: 803px;
+            margin: 0px 0px 30px 0px;
+
+            input {
+                  border-width: 0.81px;
+                  border-color: rgb(0, 0, 0);
+                  border-style: solid;
+                  background-color: rgb(246, 246, 246);
+                  width: 450px;
+                  height: 30px;
+                  margin: 0px 9px 0px 0px;
+                  padding: 3px 8px 3px 8px;
+            }
+
+      }
+
+      &__note {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+      }
+
+      &__note-title {
+            display: flex;
+            border-width: 0.81px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+            background-color: rgb(246, 246, 246);
+            width: 803px;
+            height: 33px;
+            padding: 0px 8px 0px 8px;
+            margin: -1px 0px 0px 0px;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 300;
+            z-index: 1;
+            transition: .5s;
+      }
+
+      &__note-title:hover{
+            box-shadow: 0px 0px 4px 0.6px rgba(0, 0, 0);
+            z-index: 2;
+
+      }
+
+      &__note-title:active{
+            transition: .1s;
+            box-shadow: 0px 0px 8px 1.1px rgba(0, 0, 0);
+      }
+
+      .form{
+            display: flex;
+            align-items: center;
+      }
+
+      &__add {
+            cursor: pointer;
+            background-color: rgb(0, 0, 0);
+            width: 85px;
+            height: 26px;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 400;
+            transition: .6s;
+      }
+
+      &__add:hover{
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0);
+            background-color: rgb(246, 246, 246);
+            color: #000;
+            
+      }
+
+      &__add:active{
+            font-size: 12px;
+            transition: .1s;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0);
+      }
+
+      &__note-text {
+            border-width: 0.81px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 1);
+            width: 750px;
+            height: 250px;
+            position: relative;
+            z-index: -0;
+            margin: -1px 0px 0px 0px;
+      }
+
+      &__name {
+            color: #8c8c8c;
+            flex: 1 1 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+      }
+
+      &__data {
+            margin: 0px 20px 0px 0px;
+            color: #8c8c8c;
+      }
+
+      &__editing {
+            margin: 0px 20px 0px 0px;
+            width: 3%;
+      }         
+
+      &__delet {
+            width: 3%;
+      }
+
+      &__textarea{
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 15px 20px 15px 20px;
+      }
+}
+
+.info{
+      border-width: 0.81px;
+      border-color: rgb(0, 0, 0);
+      border-style: solid;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      left: 1379px;
+      top: 137px;
+      width: 305px;
+      height: 274px;
+      font-size: 16px;
+      padding: 25px;
+
+      p{
+            font-weight: 300;
+            line-height: 27px;
+      }
+      span{
+            font-weight: 500;
+      }
+}
+
+.hidden {
+      display: none;
+}
+
+
+@media (max-width:900px) {
+
+      .header {
+            margin: 0px 0px 50px 0px;
+            }
+      .content {
+            &__header {
+                  width: 720px;
+            }
+            &__note-title {
+                  width: 720px;
+            }
+            &__note-text {
+                  width: 670px;
+            }
+      }
+}
+
+@media (max-width:768px) {
+
+      .header {
+            display: flex;
+            justify-content: center;
+            margin: 0px 0px 40px 0px;
+            &__logo {
+            margin: 0px;
+            padding: 15px;
+            }
+      }
+      .content {
+            margin: 0px 30px;
+            &__header {
+                  width: 100%;
+                  margin: 0px 0px 20px 0px;
+            }
+            &__note-title {
+                  width: 100%;
+            }
+            &__note-text {
+                  width: 95%;
+            }
+      }
+}
+
+@media (max-width:604px) {
+
+      .header {
+            &__logo {
+            }
+            }
+      .content {
+            &__header {
+                  input {
+                        width: 100%;
+                  }
+            }
+            .form{
+                  flex: 1 1 auto;
+            }
+            &__name {
+                  font-size: 12px;
+            }
+            &__data {
+                  font-size: 12px;
+            }
+            &__editing {
+                  width: 4%;
+            }         
+            &__delet {
+                  width: 4%;
+            }
+      }
+}
+
+@media (max-width:425px) {
+
+      .header {
+            margin: 0px 0px 30px 0px;
+            height: 43px;
+            &__logo {
+                  padding: 11px;
+            }
+      }
+      .content {
+            &__header {
+                  input {
+                        padding: 3px 7px;
+                        font-size: 12px;
+                  }
+            }
+            &__data {
+                  display: none;
+            }
+            &__editing {
+                  width: 6%;
+            }         
+            &__delet {
+                  width: 6%;
+            }
+            &__textarea{
+                  padding: 9px 9px;
+                  font-size: 12px;
+            }
+      }
+}
